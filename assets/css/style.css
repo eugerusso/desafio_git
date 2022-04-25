@@ -18,8 +18,8 @@ header{
 }
 header h1{
     color: white;
-    /*font-size: 32px;*/
     text-align: center;
+    
 }
 nav{
     background-color: rgb(151, 140, 140);
@@ -89,14 +89,20 @@ ul li a{
     margin: 5px;
 }
 .btn{
-    border: 0;
+    border: 3px solid rgb(125, 123, 124);
+    border-radius: 4px;
     margin-top: 5px;
-    background-color: rgba(145, 145, 145, 0.164);
-    transition: backgroun-color 1s ;
+    background-color: rgb(125, 123, 124);  
+    text-align: center;
+    padding: 5px 2px;
+    overflow: hidden;
+    
 }
-.btn:hover{
-    background-color: rgb(145, 145, 145);
+.btn a {
+    color: rgb(255, 255, 255);
 }
+
+
 
 .footerIndex{
     grid-area: footer;
@@ -118,6 +124,19 @@ ul li a{
         "nav nav nav nav nav nav "
         "main main main main main main"
         "footer footer footer footer footer footer";
+    }
+    header h1{
+        transition: transform 0.5s;
+    }
+    header h1:hover{
+        transform: scale(1,2);
+    }
+    .btn{
+        transition:  backgroun-color 1s ;
+    }
+    .btn:hover{
+        
+        background-color: rgba(86, 85, 85, 0.584);
     }
 }
 
@@ -213,10 +232,11 @@ ul li a{
 }
 .galeria{
     display:flex;
-    flex-flow: row nowrap;
-    align-content: space-around;
-    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
+
 @media screen and (min-width:1024px) {
     .contenedorProductos{
         display: grid;
@@ -228,6 +248,21 @@ ul li a{
         "nav nav nav nav nav nav"
         "main main main main main main"
         "footer footer footer footer footer footer";
+    }
+
+    .galeria{
+    flex-flow: row nowrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    
+    }
+    .galeríi__producto img{
+        border: 5px solid black;
+        transition: transform 1s;
+
+    }
+    .galeria__producto img:hover{
+        transform: scale(1.5,1.5);
     }
 }
 
